@@ -1,0 +1,251 @@
+html , body{
+    min-height: 100%;
+}
+.logo {
+    position: absolute;
+    top: 40px;
+    left: 40px;
+    width: 120px;
+    height: 48px;
+}
+main{
+    display: flex;    
+    position: relative;
+    width: 1360px;
+    height: 944px;
+    margin: 40px;
+    justify-content: space-between;
+    
+
+}
+body{
+    font-family: 'Inter', sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    background: #F3F5FC;
+    
+    
+}
+.ingresotexto { /* div de ingreso de texto cifrado-descifrado*/
+    margin-top: 128px;
+    margin-left: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+#textoingresado{ /*textarea de texto ingresado*/
+    width: 577px;
+    height: 100%;
+    font-size: 32px;
+    font-weight: 400;
+    padding: 0 0;
+    border: none;
+    outline: none;
+    color: #0A3871;
+    background: #F3F5FC;
+    overflow: auto;
+    
+}
+.ingresotexto ::placeholder{
+    color: #0A3871;
+    
+    
+}
+
+
+#limitaciones{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    position: relative;
+    width: 255px;
+    height: 18px;
+    font-size: 12px;
+    padding: 0 0 16px;    
+    color: #000;
+
+}
+#limitaciones ::before{
+    content:  url('https://api.iconify.design/bi/exclamation-circle-fill.svg');
+}
+
+.botones {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 680px;
+    height: 67px;
+   
+}
+
+#encriptar {
+    color: #FFFFFF;
+    background-color: #0A3871;
+    width: 49%;
+    height: 100%;
+    border-radius: 24px;
+    padding-right: 12px;
+}
+#desencriptar {
+    background-color: #E9ECF8;
+    border-color: #0A3871;
+    width: 49%;
+    height: 100%;
+    border-radius: 24px;
+    padding-left: 12px;
+}
+
+.muestrotexto { /*div de salida de texto cifrado-descifrado*/
+    width: 400px;
+    height: 944px;
+    border-radius: 32px;
+    background: #fff;
+    position: relative;
+    display: table-column;
+    justify-content: space-between;
+    margin-left: 1000;
+    
+}
+
+.muestrotexto #textocifrado{ /*textarea de texto mostrado*/
+    width: 300px;
+    height: 80%;
+    font-size: 32px;
+    margin: 50px;
+    border: none;
+    outline: none;
+    position: relative;
+    
+    
+}
+
+#doll {
+    width: 336px;
+    height: 304px;
+    position: relative;
+    padding: 243px 32px 32px;
+    
+    
+    
+}
+#leyenda1{
+    width: 336px;
+    height: 122px;
+    position: relative;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    padding: 32px;
+}
+#leyenda2{
+    width: 336px;
+    height: 122px;
+    position: relative;
+    text-align: center;
+    font-size: 16px;
+    padding: 32px;
+}
+#btncopiar{
+    position: relative;
+    text-align: center;
+    background-color: #E9ECF8;
+    border-color: #0A3871;
+    width: 90%;
+    height: 59px;
+    border-radius: 24px;
+    padding-right: 12px;
+    
+    margin: 19% 5% 0;
+    
+
+}
+
+@media screen and (max-width:576px){  /*dispositivo movil*/
+    header{
+        height: 25%;
+    }
+    .logo {
+        width: 32px;
+        height: 48px;
+        width: 20%;
+        
+    }
+    main{
+        display: inline-block;
+        width: 100%;
+        margin-top: 24px;
+        margin-left: 1em;
+        
+    
+    }
+
+    .ingresotexto { /* div de ingreso de texto cifrado-descifrado*/
+        
+        width: 100%;
+        height: 70%;
+        margin-left: 1em;
+    
+    }
+    #textoingresado{ /*textarea de texto ingresado*/
+        width: 100%;
+        height: 70%;
+        padding-left: 0.5em;
+        
+    }  
+    #limitaciones{
+        padding-left: 0.5em;
+    }
+    
+    .botones {
+        display: inline-block;
+        width: 100%;
+        height: 30%;
+       
+    }
+    
+    #encriptar {
+        width: 90%;
+        height: 40%;
+        margin: 0.3em 0.3em 0.3em 0;
+    }
+    #desencriptar {
+        width: 90%;
+        height: 40%;
+        margin: 0.3em 0.3em 0.3em 0;
+    }
+    
+    .muestrotexto { /*div de salida de texto cifrado-descifrado*/
+        width: 100%;
+        height: 25%;
+        margin-left: 16px;
+        display: inline-block;
+        margin: 1em;
+        
+    }
+    
+    .muestrotexto #textocifrado{ /*textarea de texto mostrado*/
+        width: 300px;
+        height: 80%;
+        
+        
+    }
+    
+    #doll {
+        display: none;        
+    }
+    #leyenda1{
+        width: 80%;
+        height: 122px;
+    }
+    #leyenda2{
+        width: 80%;
+        height: 122px;
+    }
+    #btncopiar{
+        width: 90%;
+        
+    }
+    
+
+}

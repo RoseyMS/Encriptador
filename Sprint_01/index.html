@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang = "es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewpoint" content="width-device-width">
+        <title>Encriptador - Alura</title>
+        <link rel="stylesheet" href="reset.css">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Montserrat:wght@300&display=swap" rel="stylesheet">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Montserrat:wght@300&display=swap');
+        </style>
+        <iconify-icon icon="bi:exclamation-circle-fill"></iconify-icon>
+
+    </head>
+    <body>
+        <header>
+           <img class ="logo" src="imagenes/Logo.png" alt="logo de Alura"> 
+        </header>
+        <main>
+           
+            <div class = "ingresotexto">
+                <textarea  id="textoingresado" placeholder="Ingrese el texto aquí" contenteditable="true" required></textarea>
+                <p id = "limitaciones"><span class="bi bi-exclamation-circle"></span>Solo letras minusculas y sin acentos</p>
+                <div class = "botones">
+                    <button id = "encriptar" onclick="encriptar()">Encriptar</button>
+                    <button id = "desencriptar"onclick="desencriptar()">Desencriptar</button>
+                </div>
+                
+            </div>
+            <div class = "muestrotexto">
+                <textarea  id="textocifrado"  contenteditable="false" readonly></textarea>
+
+                <div id = "mensajeinicial">
+                    <img id ="doll" src="imagenes/Muñeco.png" alt="muñeco"> 
+                    <p id="leyenda1">Ningún mensaje fue encontrado</p>
+                    <p id="leyenda2">Ingresa el texto que deseas encriptar o desencriptar</p>
+                </div>
+                <button id= btncopiar onclick="copiarTexto()"> copiar</button>
+            </div>
+        </main>
+        <footer>
+
+        </footer>
+        <script>
+           
+            const claves = ["ai", "enter", "imes", "ober", "ufat"];
+            const vocales = ["a","e","i","o","u"];
+            let textoCifrado = document.getElementById("textocifrado");
+            let botonCopiar = document.getElementById("btncopiar");
+            var textoIngresado = document.getElementById("textoingresado");
+            var iconos = document.getElementById("mensajeinicial");
+            
+            
+            textoCifrado.style.display = "none";
+            botonCopiar.style.display = "none";
+            textoIngresado.focus();
+
+            function validarTexto(){
+                var mensaje = textoIngresado.value;
+                var textoValido = false;
+                limpiarIconosVentana();
+                if (/^[a-z\s]+$/.test(mensaje)){ 
+                   textoValido = true;
+                }else{
+                    if(mensaje == ""){
+                        mostrarIconosVentana();
+                    }
+                    
+                }
+                if(!textoValido){
+                    mostrarAdvertencia("¡Oh no! Ha ocurrido un problema. El texto ingresado no debe contener mayúsculas ni acentos.");
+                }
+                return textoValido;
+
+            }
+            function encriptar(){
+
+                if (validarTexto()){
+                    encriptarMensaje(textoIngresado.value);
+                }
+                textoIngresado.value = "";
+                
+            }
+            function desencriptar(){
+                 if (validarTexto()){
+                    desencriptarMensaje(textoIngresado.value);
+                }
+                textoIngresado.value = "";
+            }
+            function mostrarAdvertencia(mensaje){
+                textoCifrado.textContent = mensaje;
+
+            }
+            function mostrarIconosVentana(){
+                iconos.style.display = "block";
+                textoCifrado.style.display = "none";
+                
+              
+            }
+            function limpiarIconosVentana() {
+                iconos.style.display = "none";
+                textoCifrado.style.display = "block";
+                botonCopiar.style.display = "block";
+              
+            }
+  
+            function encriptarMensaje(mensaje){
+                var mensajeEncriptado = "";
+                var encontrado = false;
+                for(var i = 0; i < mensaje.length; i++){
+                    
+                    for(var j = 0; j < vocales.length; j++){
+                        if(mensaje[i] == vocales[j]){
+                            mensajeEncriptado = mensajeEncriptado + claves[j];
+                            encontrado = true;
+                            break;
+                        }
+                    }
+                    if(!encontrado){
+                        mensajeEncriptado = mensajeEncriptado + mensaje[i];
+                    } 
+                    encontrado = false; 
+                }
+                
+                mostrarMensaje(mensajeEncriptado);
+                
+            }
+            function desencriptarMensaje(mensaje){
+                var mensajeDesencriptado = mensaje;
+               
+                claves.forEach((clave,i)=> {
+                    mensajeDesencriptado = mensajeDesencriptado.replaceAll(clave,vocales[i])
+                })
+
+               
+                mostrarMensaje(mensajeDesencriptado);
+                
+
+            }
+            
+            function mostrarMensaje(mensaje){
+                var parrafo = document.getElementById("textocifrado");
+                textoCifrado.textContent = mensaje;
+                
+            }
+            function copiarTexto(){
+                textoCifrado.select();
+                document.execCommand("copy");
+            }
+        </script>
+            
+    </body>
+</html>
