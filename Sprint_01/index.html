@@ -60,7 +60,7 @@
                 var mensaje = textoIngresado.value;
                 var textoValido = false;
                 limpiarIconosVentana();
-                if (/^[a-z\s]+$/.test(mensaje)){ 
+                if (/^[a-z \s .,:;]+$/.test(mensaje)){ 
                    textoValido = true;
                 }else{
                     if(mensaje == ""){
