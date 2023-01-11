@@ -5,11 +5,9 @@
     }
     
     .logo {
-        width: 32px;
-        height: 48px;
-        width: 20%;
-        margin-top: 2em;
-        
+        width: 25%;
+        height: 25%;
+        margin-top: 2em;        
     }
     main{
         display: inline-block;
@@ -17,8 +15,7 @@
         width: 100%;
         height: 85%;
         margin-top: 24px;
-        margin-left: 1em;     
-    
+        margin-left: 1em;      
     }
     body{
         font-family: 'Inter', sans-serif;
@@ -31,19 +28,21 @@
         height: 70%;
         margin-left: 1em;
         display: inline-block;
+        
     }
     #textoingresado{ /*textarea de texto ingresado*/
         width: 90%;
         height: 70%;
         padding-left: 0.5em;
-        font-size: 32px;
+        font-size: 4em;
         font-weight: 400;
-        padding: 0 0;
+        padding: 5% 0;
         border: none;
         outline: none;
         color: #0A3871;
         background: #F3F5FC;
         overflow: auto;
+        
     }  
     .ingresotexto ::placeholder{
         color: #0A3871;
@@ -55,36 +54,41 @@
         align-items: center;
         gap: 8px;
         position: relative;
-        width: 255px;
-        height: 5%;
-        font-size: 12px;
-        padding: 0 0 16px;    
+        width: 70%;
+        height: 8%;
+        font-size: 1.5em;   
         color: #000;
+
     }
     #limitaciones ::before{
         content:  url('https://api.iconify.design/bi/exclamation-circle-fill.svg');
     }
     .botones {
-        display: inline-block;
+        
         width: 100%;
         height: 25%;
-        position: relative;      
+        position: relative;
+           
     }
     #encriptar {
         width: 90%;
         height: 40%;
-        margin: 0.3em 0.3em 0.3em 0;
         color: #FFFFFF;
         background-color: #0A3871;
         border-radius: 24px;
+        font-size: 2em; 
+
     }
     #desencriptar {
         width: 90%;
         height: 40%;
-        margin: 0.3em 0.3em 0.3em 0;
         background-color: #E9ECF8;
         border-color: #0A3871;
+        color: #0A3871;
         border-radius: 24px;
+        font-size: 2em; 
+        
+        
     }
     .muestrotexto { /*div de salida de texto cifrado-descifrado*/
         width: 95%;
@@ -94,47 +98,54 @@
         border-radius: 32px;
         background: #fff;
         position: relative;
+
     }
     #textocifrado{ /*textarea de texto mostrado*/
         width: 90%;
         height: 90%;
-        margin: 0.5em;
-        font-size: 32px;
+        margin: 5%;
+        font-size: 3em;
         border: none;
         outline: none;
         position: relative;
+
+        
     }
     #doll {
         display: none;       
     }
     #leyenda1{
         width: 80%;
-        height: 122px;
+        height: 25%;
         position: relative;
         text-align: center;
-        font-size: 24px;
+        font-size: 2em;
         font-weight: bold;
-        padding: 32px;
+        padding: 10%;
+
+
     }
     #leyenda2{
         width: 80%;
-        height: 122px;
+        height: 25%;
         position: relative;
         text-align: center;
-        font-size: 16px;
-        padding: 32px;
+        font-size: 2em;
+        padding: 10%;
+
     }
     #btncopiar{
         width: 90%;
-        margin: 0;
+        margin: 5%;
         position: relative;
         text-align: center;
         background-color: #E9ECF8;
         border-color: #0A3871;
-        height: 59px;
+        color: #0A3871;
+        height: 20%;
         border-radius: 24px;
         padding-right: 12px;
-        
+        font-size: 2em;
     }
     /*------------------------------------------TABLET----------------------------------------------------------------**/
 @media only screen and (min-width: 600px){
@@ -144,12 +155,9 @@
     .ingresotexto{
         justify-content: space-between;
     }
-    .botones {
-        display: flex;
-        justify-content: space-between;  
+    .botones { 
         width: 95%;
         height: 10%;
-
     }
     #encriptar {
         width: 49%;
@@ -161,38 +169,24 @@
         height: 100%;
        
     }
-    
 }
 /**--------------------------------------------DESKTOP-----------------------------------------------------------------**/
 @media only screen and (min-width: 1200px){
     
     .logo {
-        position: relative;
-        top: 40px;
-        left: 40px;
-        width: 120px;
-        height: 48px;
+        width: 10%;
+        height: 10%;
     }
     main{
         display: flex;    
-        position: absolute;
-        width: 100%;
         height: 80%;
-        margin: 40px;
+        margin: 2em;
         justify-content: space-between;
-        
-    
-    }
-    body{
-        font-family: 'Inter', sans-serif;
-        font-family: 'Montserrat', sans-serif;
-        background: #F3F5FC;
-        
-        
+
     }
     .ingresotexto { /**div de ingreso texto**/
-        margin-top: 128px;
-        margin-left: 200px;
+        margin-top: 5em;
+        margin-left: 5em;
         width: 60%;
         height: 90%;
         display: flex;
@@ -200,120 +194,50 @@
     
     }
     #textoingresado{
-        width: 577px;
-        height: 90%;
-        font-size: 32px;
-        font-weight: 400;
-        padding: 0 0;
-        border: none;
-        outline: none;
-        color: #0A3871;
-        background: #F3F5FC;
-        overflow: auto;
+        width: 70%;
         display: inline-block;
-        
-    }
-    .ingresotexto ::placeholder{
-        color: #0A3871; 
-    }
-    #limitaciones{
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        position: relative;
-        width: 50%;
-        height: 5%;
-        font-size: 18px;
-        padding: 0 0 16px;    
-        color: #000;
-        display: inline-block;
-    
-    }
-    #limitaciones ::before{
-        content:  url('https://api.iconify.design/bi/exclamation-circle-fill.svg');
     }
     .botones {
         display: inline-flex;
         justify-content: space-between;
-        position: relative;
         width: 70%;
         height: 8%;
        
     }
     #encriptar {
-        color: #FFFFFF;
-        background-color: #0A3871;
         width: 49%;
         height: 100%;
-        border-radius: 24px;
-        padding-right: 12px;
     }
     #desencriptar {
-        background-color: #E9ECF8;
-        border-color: #0A3871;
         width: 49%;
         height: 100%;
-        border-radius: 24px;
-        padding-left: 12px;
+       
     }
     .muestrotexto { /**div de muestro texto**/
         width: 30%;
         height: 100%;
         border-radius: 32px;
-        background: #fff;
-        position: relative;
         display: table-column;
         justify-content: space-between;
         margin-right: 5%;
         
     }
     #textocifrado{ 
-        width: 85%;
         height: 80%;
-        font-size: 32px;
-        margin: 10%;
-        border: none;
-        outline: none;
-        position: relative;
-        
         
     }
     #doll {
         display: block;
-        width: 336px;
-        height: 304px;
+        width: 80%;
+        height: 50%;
         position: relative;
-        padding: 243px 32px 32px;
-        
-        
-        
+        padding: 25% 10%;
     }
     #leyenda1{
-        width: 70%;
-        height: 122px;
-        position: relative;
-        text-align: center;
-        font-size: 24px;
-        font-weight: bold;
-        padding: 10%;
-    }
-    #leyenda2{
-        width: 70%;
-        height: 122px;
-        position: relative;
-        text-align: center;
-        font-size: 16px;
-        padding: 10%;
+        padding: 0 10%;
     }
     #btncopiar{
-        position: relative;
-        text-align: center;
-        background-color: #E9ECF8;
-        border-color: #0A3871;
-        width: 90%;
         height: 7%;
-        border-radius: 24px;
-        margin: 5%;
     }
     
 }
