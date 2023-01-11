@@ -21,6 +21,7 @@
         font-family: 'Inter', sans-serif;
         font-family: 'Montserrat', sans-serif;
         background: #F3F5FC; 
+
     }
     .ingresotexto { /* div de ingreso de texto cifrado-descifrado*/
         
@@ -116,22 +117,22 @@
     }
     #leyenda1{
         width: 80%;
-        height: 25%;
+        height: 20%;
         position: relative;
         text-align: center;
         font-size: 2em;
         font-weight: bold;
-        padding: 10%;
+        padding: 5% 10% 0;
 
 
     }
     #leyenda2{
         width: 80%;
-        height: 25%;
+        height: 20%;
         position: relative;
         text-align: center;
         font-size: 2em;
-        padding: 10%;
+        padding: 10% 10% 0;
 
     }
     #btncopiar{
@@ -147,6 +148,7 @@
         padding-right: 12px;
         font-size: 2em;
     }
+
     /*------------------------------------------TABLET----------------------------------------------------------------**/
 @media only screen and (min-width: 600px){
     main{
@@ -229,12 +231,18 @@
     #doll {
         display: block;
         width: 80%;
-        height: 50%;
+        height: 5%;
         position: relative;
-        padding: 25% 10%;
+        padding: 10% 10% 0;
+        
     }
     #leyenda1{
+        height: 5%;
         padding: 0 10%;
+    }
+    #leyenda2{
+        padding: 2% 10% 0;
+        height: 5%;
     }
     #btncopiar{
         height: 7%;
