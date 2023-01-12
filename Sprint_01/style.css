@@ -33,7 +33,7 @@
     }
     #textoingresado{ /*textarea de texto ingresado*/
         width: 90%;
-        height: 70%;
+        height: 60%;
         padding-left: 0.5em;
         font-size: 3em;
         font-weight: 400;
@@ -95,7 +95,7 @@
         width: 95%;
         height: 30%;
         display: inline-block;
-        margin: 2em 2em 0 0;
+        margin: 2em 2em 2em 0;
         border-radius: 32px;
         background: #fff;
         position: relative;
@@ -148,6 +148,7 @@
         padding-right: 12px;
         font-size: 2em;
     }
+    
 
     /*------------------------------------------TABLET----------------------------------------------------------------**/
 @media only screen and (min-width: 600px){
@@ -187,7 +188,7 @@
 
     }
     .ingresotexto { /**div de ingreso texto**/
-        margin-top: 5em;
+        margin-top: 1em;
         margin-left: 5em;
         width: 60%;
         height: 90%;
@@ -221,7 +222,8 @@
         border-radius: 32px;
         display: table-column;
         justify-content: space-between;
-        margin-right: 5%;
+        margin: 0 5% 5% 0;
+        
         
     }
     #textocifrado{ 
